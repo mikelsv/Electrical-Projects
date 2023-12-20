@@ -3,12 +3,14 @@ BC_OPT_ADDSZ = .5;
 BC_OPT_POIDIA = 1.5;
 
 // Battery
-module Bat18650Half(center = false){
+module Bat18650Half(center = false, add_length = 0, add_size = 0){
+  // 38 x 17mm
+
   if(center == false)
-    cylinder(38, d = 17);
+    cylinder(38 + add_length, d = 17 + add_size);
   else
-    translate([0, 0, -38 / 2])
-    cylinder(38, d = 17);  
+    translate([0, 0, -(38 + add_length) / 2])
+    cylinder(38 + add_length, d = 17 + add_size);  
 }
 
 // DIP
