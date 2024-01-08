@@ -31,3 +31,13 @@ Thingiverse: https://www.thingiverse.com/thing:6388327
 Openscad: /openscad/Voltage convertor/Power Supply XL4015.scad
 
 YouTube: https://youtu.be/f8i39ENs2dU
+
+## Electronic Load
+![Electronic Load](https://github.com/mikelsv/Electrical-Projects/blob/main/images/ElectronicLoad.jpg)
+
+### Sources:
+KiCad sheme: /kicad/Electronic Load 2N5401 2N5551
+
+Openscad: /openscad/Voltage convertor/Electronic Load 2N5401 2N5551.scad
+
+YouTube: https://youtu.be/1Vz2KkpufGk
