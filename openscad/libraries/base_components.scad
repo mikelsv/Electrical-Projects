@@ -108,6 +108,18 @@ module BcSwitch7x7Full(add = .3, legsz = BC_OPT_LEGSZ, up = 0, leg_dia = BC_OPT_
       //Poi(x, y);
 }
 
+module BcButton6x6(add = .2, hsz = 4, legsz = BC_OPT_LEGSZ){
+  rs = 6 + add;
+  
+  translate([- rs / 2, -rs / 2, 0])
+  cube([rs, rs, hsz]);
+
+  for(x = [-1: 2 : 1])
+    for(y = [-1: 2 : 1])
+      translate([x * 2.5, y * 2.6, -legsz])
+      cylinder(legsz, d = 1);
+}
+
 module BcLed3mm(legsz = BC_OPT_LEGSZ){
   cylinder(5, d = 3);
   cylinder(1, d = 4.0);
@@ -349,21 +361,6 @@ module BcPin254(size = 1, addsz = BC_OPT_ADDSZ, legsz = BC_OPT_LEGSZ){
       cylinder(legsz, d = 1.5);    
 }
 
-// Helpers
-module BcHelperPrintBox(pos = [0, 0], size, step = 1){
-  for(y = [0 : step : size[1]])
-    translate([pos[0] - size[0] / 2, pos[1] - size[1] / 2 + y, 0])
-      cube([size[0], .6, .2]);
-}
-
-module BcHelperPrintCircle(pos, dia = 10){
-  translate([pos[0], pos[1], 0])
-  intersection(){
-    BcHelperPrintBox([0, 0], [dia, dia]);    
-    cylinder(.2, d = dia);    
-  }  
-}
-
 // Usb
 module BcUsbMicro(legsz = BC_OPT_LEGSZ){
   MDL_POWER_LEN = 0;
@@ -389,6 +386,20 @@ module BcUsbMicro(legsz = BC_OPT_LEGSZ){
     // Power Usb Connectors (+, -)
     for(y = [-1, 1])
       translate([MDL_POWER_LEN - 8, y * 1.27, -legsz])
-        cylinder(5 + legsz, d = 1);     
-  
+        cylinder(5 + legsz, d = 1);  
+}
+
+// Helpers
+module BcHelperPrintBox(pos = [0, 0], size, step = 1){
+  for(y = [0 : step : size[1]])
+    translate([pos[0] - size[0] / 2, pos[1] - size[1] / 2 + y, 0])
+      cube([size[0], .6, .2]);
+}
+
+module BcHelperPrintCircle(pos, dia = 10){
+  translate([pos[0], pos[1], 0])
+  intersection(){
+    BcHelperPrintBox([0, 0], [dia, dia]);    
+    cylinder(.2, d = dia);    
+  }  
 }
