@@ -51,3 +51,5 @@ KiCad sheme: /kicad/Human Acu Tester
 Openscad: /openscad/Voltage convertor/Human Acu Tester.scad
 
 YouTube: https://youtube.com/shorts/WKZl-tUxw0U
+
+Pikabu: https://pikabu.ru/story/yelektro_akupunktura_11068489
