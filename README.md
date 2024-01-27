@@ -41,3 +41,13 @@ KiCad sheme: /kicad/Electronic Load 2N5401 2N5551
 Openscad: /openscad/Voltage convertor/Electronic Load 2N5401 2N5551.scad
 
 YouTube: https://youtu.be/1Vz2KkpufGk
+
+## Human Acupuncture Tester
+![Human Acupuncture](https://github.com/mikelsv/Electrical-Projects/blob/main/images/ElectroAcu.jpg)
+
+### Sources:
+KiCad sheme: /kicad/Human Acu Tester
+
+Openscad: /openscad/Voltage convertor/Human Acu Tester.scad
+
+YouTube: https://youtube.com/shorts/WKZl-tUxw0U
